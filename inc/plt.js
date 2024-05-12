@@ -169,15 +169,7 @@ function constructsvg(x, y, data, colors, options) {
 }
 
 const colors = d3.scale.category10().range();
-const opts = (() => {
-    this.margin = {top: 50, right: 30, bottom: 50, left: 50};
-    this.width = 1080 - this.margin.left - this.margin.right;
-    this.height = 500 - this.margin.top - this.margin.bottom;
-    this.xlabel = 'timeseries';
-    this.ylabel = 'Values';
-    this.title = 'Sample Plot'
-    return this;
-})();
+
 const xcor = getcor('x', 0, width, -height, 'bottom');
 const ycor = getcor('y', height, 0, -width, 'left');
 const line = getline(xcor.val, ycor.val);
